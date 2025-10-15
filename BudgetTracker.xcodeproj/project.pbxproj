@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		0B7860542E9EC49300086794 /* Finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7860542E9EC49300086794 /* BudgetTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0B7860662E9EC49600086794 /* Exceptions for "Finance" folder in "Finance" target */ = {
+		0B7860662E9EC49600086794 /* Exceptions for "BudgetTracker" folder in "Finance" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/Info.plist,
@@ -23,12 +23,12 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0B7860562E9EC49300086794 /* Finance */ = {
+		0B7860562E9EC49300086794 /* BudgetTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0B7860662E9EC49600086794 /* Exceptions for "Finance" folder in "Finance" target */,
+				0B7860662E9EC49600086794 /* Exceptions for "BudgetTracker" folder in "Finance" target */,
 			);
-			path = Finance;
+			path = BudgetTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -47,7 +47,7 @@
 		0B78604B2E9EC49300086794 = {
 			isa = PBXGroup;
 			children = (
-				0B7860562E9EC49300086794 /* Finance */,
+				0B7860562E9EC49300086794 /* BudgetTracker */,
 				0B7860552E9EC49300086794 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,7 +55,7 @@
 		0B7860552E9EC49300086794 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B7860542E9EC49300086794 /* Finance.app */,
+				0B7860542E9EC49300086794 /* BudgetTracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,13 +76,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0B7860562E9EC49300086794 /* Finance */,
+				0B7860562E9EC49300086794 /* BudgetTracker */,
 			);
 			name = Finance;
 			packageProductDependencies = (
 			);
 			productName = Finance;
-			productReference = 0B7860542E9EC49300086794 /* Finance.app */;
+			productReference = 0B7860542E9EC49300086794 /* BudgetTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +149,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58NQ7DA6UP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Finance/Resources/Info.plist;
+				INFOPLIST_FILE = BudgetTracker/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BudgetTracker;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -159,8 +160,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = my.company.Finance;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = my.company.BudgetTracker;
+				PRODUCT_NAME = BudgetTracker;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -176,7 +177,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58NQ7DA6UP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Finance/Resources/Info.plist;
+				INFOPLIST_FILE = BudgetTracker/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BudgetTracker;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -186,8 +188,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = my.company.Finance;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = my.company.BudgetTracker;
+				PRODUCT_NAME = BudgetTracker;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
