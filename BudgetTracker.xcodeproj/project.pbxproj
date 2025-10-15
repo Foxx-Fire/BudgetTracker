@@ -10,24 +10,9 @@
 		0B7860542E9EC49300086794 /* BudgetTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0B7860662E9EC49600086794 /* Exceptions for "BudgetTracker" folder in "Finance" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Info.plist,
-				"Sources/Apps/DI/ Assemblies/Untitled.swift",
-				Sources/Modules/Common/Views/EmptyStateView.swift,
-			);
-			target = 0B7860532E9EC49300086794 /* Finance */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0B7860562E9EC49300086794 /* BudgetTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				0B7860662E9EC49600086794 /* Exceptions for "BudgetTracker" folder in "Finance" target */,
-			);
 			path = BudgetTracker;
 			sourceTree = "<group>";
 		};
