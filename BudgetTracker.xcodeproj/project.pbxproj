@@ -10,9 +10,22 @@
 		0B7860542E9EC49300086794 /* BudgetTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0B8BAD1F2EAED2900009C0BA /* Exceptions for "BudgetTracker" folder in "BudgetTracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Info.plist,
+			);
+			target = 0B7860532E9EC49300086794 /* BudgetTracker */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0B7860562E9EC49300086794 /* BudgetTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0B8BAD1F2EAED2900009C0BA /* Exceptions for "BudgetTracker" folder in "BudgetTracker" target */,
+			);
 			path = BudgetTracker;
 			sourceTree = "<group>";
 		};
