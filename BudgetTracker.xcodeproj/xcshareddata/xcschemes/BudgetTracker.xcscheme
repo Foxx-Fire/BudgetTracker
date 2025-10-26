@@ -17,7 +17,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B7860532E9EC49300086794"
                BuildableName = "BudgetTracker.app"
-               BlueprintName = "Finance"
+               BlueprintName = "BudgetTracker"
                ReferencedContainer = "container:BudgetTracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B7860532E9EC49300086794"
             BuildableName = "BudgetTracker.app"
-            BlueprintName = "Finance"
+            BlueprintName = "BudgetTracker"
             ReferencedContainer = "container:BudgetTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B7860532E9EC49300086794"
             BuildableName = "BudgetTracker.app"
-            BlueprintName = "Finance"
+            BlueprintName = "BudgetTracker"
             ReferencedContainer = "container:BudgetTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

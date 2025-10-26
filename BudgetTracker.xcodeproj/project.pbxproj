@@ -10,9 +10,23 @@
 		0B7860542E9EC49300086794 /* BudgetTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0BBCDA792EA03A5F00E07623 /* Exceptions for "BudgetTracker" folder in "BudgetTracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Info.plist,
+				"Sources/Application/DI/ Assemblies/ProfileAssembly.txt",
+			);
+			target = 0B7860532E9EC49300086794 /* BudgetTracker */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0B7860562E9EC49300086794 /* BudgetTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0BBCDA792EA03A5F00E07623 /* Exceptions for "BudgetTracker" folder in "BudgetTracker" target */,
+			);
 			path = BudgetTracker;
 			sourceTree = "<group>";
 		};
@@ -48,9 +62,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B7860532E9EC49300086794 /* Finance */ = {
+		0B7860532E9EC49300086794 /* BudgetTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B7860672E9EC49600086794 /* Build configuration list for PBXNativeTarget "Finance" */;
+			buildConfigurationList = 0B7860672E9EC49600086794 /* Build configuration list for PBXNativeTarget "BudgetTracker" */;
 			buildPhases = (
 				0B7860502E9EC49300086794 /* Sources */,
 				0B7860512E9EC49300086794 /* Frameworks */,
@@ -63,7 +77,7 @@
 			fileSystemSynchronizedGroups = (
 				0B7860562E9EC49300086794 /* BudgetTracker */,
 			);
-			name = Finance;
+			name = BudgetTracker;
 			packageProductDependencies = (
 			);
 			productName = Finance;
@@ -99,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B7860532E9EC49300086794 /* Finance */,
+				0B7860532E9EC49300086794 /* BudgetTracker */,
 			);
 		};
 /* End PBXProject section */
@@ -130,9 +144,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58NQ7DA6UP;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BudgetTracker/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BudgetTracker;
@@ -147,6 +162,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = my.company.BudgetTracker;
 				PRODUCT_NAME = BudgetTracker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -158,9 +174,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58NQ7DA6UP;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BudgetTracker/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BudgetTracker;
@@ -175,6 +192,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = my.company.BudgetTracker;
 				PRODUCT_NAME = BudgetTracker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B7860672E9EC49600086794 /* Build configuration list for PBXNativeTarget "Finance" */ = {
+		0B7860672E9EC49600086794 /* Build configuration list for PBXNativeTarget "BudgetTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B7860682E9EC49600086794 /* Debug */,
