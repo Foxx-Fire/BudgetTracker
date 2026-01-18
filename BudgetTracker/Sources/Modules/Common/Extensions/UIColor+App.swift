@@ -18,4 +18,5 @@ extension UIColor {
     static let appBackground = UIColor.white
     static let appWhite = UIColor.white
     static let appShadow = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+    static let appBlue = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1)
 }

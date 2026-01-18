@@ -6,6 +6,13 @@
 //
 import Foundation
 
+protocol CategoryServiceProtocol {
+    var allCategories: [Category] { get }
+    func category(for name: String) -> Category?
+    func categoryName(for identifier: String) -> String
+    func categoryIcon(for identifier: String) -> String
+}
+
 final class CategoryService: CategoryServiceProtocol {
     
         private let categories: [String: Category] = [

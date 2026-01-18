@@ -7,6 +7,12 @@
 
 import Foundation
 
+protocol CurrencyServiceProtocol {
+    func currency(for code: String) -> Currency?
+    var availableCurrencies: [Currency] { get }
+}
+
+
 final class CurrencyService: CurrencyServiceProtocol {
     private let currencies: [String: Currency] = [
         "USD": .usd,

@@ -6,6 +6,13 @@
 //
 import Foundation
 
+protocol CategoryViewModelProtocol {
+    var categoryCount: Int { get }
+    func getCategory(for index: Int) -> Category
+    func getCategory(for name: String) -> Category?
+}
+
+
 final class CategoryViewModel: CategoryViewModelProtocol {
     
     private let categoryService: CategoryServiceProtocol
@@ -22,7 +29,7 @@ final class CategoryViewModel: CategoryViewModelProtocol {
     
     func getCategory(for index: Int) -> Category {
         guard index < categories.count else {
-            return Category(name: "", icon: "")
+            return Category(id: "", name: "", icon: "")
         }
         return categories[index]
     }
