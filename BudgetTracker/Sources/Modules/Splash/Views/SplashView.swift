@@ -2,32 +2,27 @@
 //  SplashView.swift
 //  BudgetTracker
 //
-//  Created by FoxxFire on 16.10.2025.
+//  Created by FoxxFire on 23.10.2025.
 //
 
 import UIKit
 
 enum SplashConstants {
-    
-    enum Fonts {
-        static let mediumTitle = UIFont(name: "Inter_18pt-Light", size: 16)
-    }
-    
     enum Layout {
-        static let imageTopPercent: CGFloat = 337 / 812 // ≈ 0.415
-        static let imageWidthPercent: CGFloat = 164 / 375 // ≈ 0.437
-        static let imageHeightPercent: CGFloat = 155 / 812 // ≈ 0.191
-        static let textTopSpacingPercent: CGFloat = 215 / 812 // ≈ 0.265
-        static let textWidthPercent: CGFloat = 115 / 375 // ≈ 0.307
-        static let textHeightPercent: CGFloat = 20 / 812 // ≈ 0.025
+        static let activityIndicatorSize: CGFloat = 50
+        static let logoTopPercent: CGFloat = 128 / 812 //≈ 0.158 (как в онбординге)
+        static let logoWidthPercent: CGFloat = 232 / 375 //≈ 0.619 (как в онбординге)
+        static let logoHeightPercent: CGFloat = 251 / 812 //≈ 0.309 (как в онбординге)
     }
 }
 
-class SplashView: UIView {
+final class SplashView: UIView {
     
-    private let splashImageView = UIImageView()
-    private let titleLabel = UILabel()
+    // MARK: - UI Elements
+    private let backgroundImageView = UIImageView()
+    private let activityIndicator = UIActivityIndicatorView(style: .large)
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -39,56 +34,55 @@ class SplashView: UIView {
     }
     
     // MARK: - Private Methods
-    
     private func setupView() {
-        backgroundColor = .appPink
+        backgroundColor = .appBackground
         
-        splashImageView.contentMode = .scaleAspectFit
-        splashImageView.translatesAutoresizingMaskIntoConstraints = false
+        // Используем первый фон из онбординга для единообразия
+        backgroundImageView.image = UIImage(named: "staying")
+        backgroundImageView.contentMode = .scaleAspectFit
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        titleLabel.textColor = .appWhite
-        titleLabel.font = SplashConstants.Fonts.mediumTitle
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.color = .appPink
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
         
-        addSubview(splashImageView)
-        addSubview(titleLabel)
+        addSubview(backgroundImageView)
+        addSubview(activityIndicator)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            
-            splashImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            splashImageView.topAnchor.constraint(
+            // Background Image (как в онбординге)
+            backgroundImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            backgroundImageView.topAnchor.constraint(
                 equalTo: topAnchor,
-                constant: UIScreen.main.bounds.height * SplashConstants.Layout.imageTopPercent
+                constant: UIScreen.main.bounds.height *
+                SplashConstants.Layout.logoTopPercent
             ),
-            splashImageView.widthAnchor.constraint(
+            backgroundImageView.widthAnchor.constraint(
                 equalTo: widthAnchor,
-                multiplier: SplashConstants.Layout.imageWidthPercent
+                multiplier: SplashConstants.Layout.logoWidthPercent
             ),
-            splashImageView.heightAnchor.constraint(
+            backgroundImageView.heightAnchor.constraint(
                 equalTo: heightAnchor,
-                multiplier: SplashConstants.Layout.imageHeightPercent
+                multiplier: SplashConstants.Layout.logoHeightPercent
             ),
             
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(
-                equalTo: splashImageView.bottomAnchor,
-                constant: UIScreen.main.bounds.height * SplashConstants.Layout.textTopSpacingPercent
-            ),
-            titleLabel.widthAnchor.constraint(
-                equalTo: widthAnchor,
-                multiplier: SplashConstants.Layout.textWidthPercent
-            ),
-            titleLabel.heightAnchor.constraint(
-                equalTo: heightAnchor,
-                multiplier: SplashConstants.Layout.textHeightPercent
+            // Activity Indicator (внизу экрана)
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.bottomAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.bottomAnchor,
+                constant: -100
             )
         ])
     }
     
-    func configure(with imageName: String, title: String) {
-        splashImageView.image = UIImage(named: imageName)
-        titleLabel.text = title
+    // MARK: - Public Methods
+    func startLoadingAnimation() {
+        activityIndicator.startAnimating()
+    }
+    
+    func stopLoadingAnimation() {
+        activityIndicator.stopAnimating()
     }
 }
