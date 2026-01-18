@@ -1,0 +1,11 @@
+Архитектура Daily экрана:
+
+    DailyCoordinator - навигация
+
+    CustomTabBarController - кастомный таббар
+
+    DailyViewController - контроллер с таблицей
+
+    DailyView - кастомное view с таблицей внутри
+
+    TransactionCell - кастомная ячейка
