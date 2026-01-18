@@ -18,13 +18,11 @@ class OnboardingCoordinator: Coordinator {
     func start() {
     
         let onboardingVC = OnboardingContainerViewController()
-        
         onboardingVC.onFinish = { [weak self] in
             self?.onFinish?()
         }
         
         window.rootViewController = onboardingVC
-        window.makeKeyAndVisible()
     }
 }
 

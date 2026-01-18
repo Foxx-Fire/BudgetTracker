@@ -13,6 +13,10 @@ enum OnboardingPageConstants {
         static let cardTopPercent: CGFloat = 511 / 812 //≈ 0.629
         static let cardHeightPercent: CGFloat = 270 / 812 //≈ 0.371 // 812 - 511 = 301
     }
+    
+    enum Colors {
+        static let pageControlDefault = UIColor.gray
+    }
 }
 
 final class OnboardingPageView: UIView {
@@ -21,6 +25,7 @@ final class OnboardingPageView: UIView {
     private let backgroundView = OnboardingBackgroundView()
     private let contentCardView = ContentCardView()
     private let skipButton = UIButton()
+    let pageControl = CustomPageControl()
     
     // MARK: - Properties
     var onAction: (() -> Void)?
@@ -63,6 +68,10 @@ final class OnboardingPageView: UIView {
         
         skipButton.addAction(skipTapped, for: .touchUpInside)
         
+        // Это чтобы пользователь не мог тапать по точкам
+        pageControl.isUserInteractionEnabled = false
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        
         contentCardView.translatesAutoresizingMaskIntoConstraints = false
         contentCardView.onAction = { [weak self] in
             self?.onAction?()
@@ -70,6 +79,7 @@ final class OnboardingPageView: UIView {
         
         addSubview(backgroundView)
         addSubview(skipButton)
+        addSubview(pageControl)
         addSubview(contentCardView)
     }
     
@@ -80,8 +90,19 @@ final class OnboardingPageView: UIView {
             backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            skipButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            skipButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            skipButton.topAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.topAnchor,
+                constant: 16
+            ),
+            skipButton.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: -20
+            ),
+            
+            pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
+            pageControl.bottomAnchor.constraint(
+                equalTo: contentCardView.topAnchor,
+                constant: -35),
             
             contentCardView.leadingAnchor.constraint(
                 equalTo: leadingAnchor,
@@ -111,34 +132,18 @@ final class OnboardingPageView: UIView {
         cardTitle: String?,
         cardDescription: String?
     ) {
-        backgroundView.configure(
-            with: backgroundImageName,
-            currentPage: currentPage,
-            totalPages: totalPages
-        )
+        backgroundView.configure(with: backgroundImageName)
         
-        if let cardTitle = cardTitle, let cardDescription = cardDescription {
-            if currentPage == totalPages - 1 {
-                // Последняя страница - меняем текст кнопки
-                contentCardView.configure(
-                    title: cardTitle,
-                    description: cardDescription,
-                    buttonTitle: "Get Started" // ← специальный текст для завершения
-                )
-            } else {
-                // Обычные страницы
-                contentCardView.configure(
-                    title: cardTitle,
-                    description: cardDescription
-                    // buttonTitle по умолчанию "I'm interested"
-                )
-            }
-            contentCardView.isHidden = false
-        } else {
-            contentCardView.isHidden = true
+        pageControl.currentPage = currentPage
+        pageControl.numberOfPages = totalPages
+        
+        if let cardTitle = cardTitle,
+           let cardDescription = cardDescription {
+            contentCardView.configure(
+                title: cardTitle,
+                description: cardDescription
+                // buttonTitle по умолчанию "I'm interested"
+            )
         }
-        
-        // На последней странице можно скрыть Skip
-        skipButton.isHidden = (currentPage == totalPages - 1)
     }
 }

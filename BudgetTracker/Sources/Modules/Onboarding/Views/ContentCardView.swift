@@ -124,7 +124,10 @@ class ContentCardView: UIView {
         NSLayoutConstraint.activate([
             
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: ContentCardConstants.Layout.stackTopOffset),
+            stackView.topAnchor.constraint(
+                equalTo: topAnchor,
+                constant: ContentCardConstants.Layout.stackTopOffset
+            ),
             
             titleLabel.widthAnchor.constraint(equalToConstant: ContentCardConstants.Layout.titleWidthOffset),
             descriptionLabel.widthAnchor.constraint(equalToConstant: ContentCardConstants.Layout.descriptionWidthOffset),
@@ -132,7 +135,10 @@ class ContentCardView: UIView {
             actionButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             actionButton.widthAnchor.constraint(equalToConstant: ContentCardConstants.Layout.buttonWidthOffset),
             actionButton.heightAnchor.constraint(equalToConstant: ContentCardConstants.Layout.buttonHeightOffset),
-            actionButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ContentCardConstants.Layout.buttonBottomOffset)
+            actionButton.bottomAnchor.constraint(
+                equalTo: bottomAnchor,
+                constant: ContentCardConstants.Layout.buttonBottomOffset
+            )
         ])
     }
     
@@ -140,12 +146,6 @@ class ContentCardView: UIView {
         titleLabel.text = title
         descriptionLabel.text = description
         
-        // Если передали кастомный текст кнопки - используем его
-        if let buttonTitle = buttonTitle {
-            actionButton.setTitle(buttonTitle, for: .normal)
-        } else {
-            // Иначе используем текст по умолчанию
-            actionButton.setTitle("I'm interested", for: .normal)
-        }
+        actionButton.setTitle("Get started", for: .normal)
     }
 }
